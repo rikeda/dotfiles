@@ -13,7 +13,8 @@ function _set_git_branch() {
   elif [[ -n `echo "$st" | grep "^# Untracked"` ]]; then
     color=%F{blue}
   else
-    color=%F{red}
+    # color=%F{red}
+    color=%F{cyan}
   fi
   echo " - [%{$color%}${git_branch}%f]"
 }
