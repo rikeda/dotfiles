@@ -13,14 +13,14 @@ function _set_git_branch() {
   elif [[ -n `echo "$st" | grep "^# Untracked"` ]]; then
     color=%F{blue}
   else
-    # color=%F{red}
-    color=%F{cyan}
+    color=%F{red}
   fi
   echo " - [%{$color%}${git_branch}%f]"
 }
 
 function _set_left_prompt(){
-  PROMPT=$'[%n@%m] - [%F{magenta}%~%f%1(v| %F{green}%1v%f|)]`_set_git_branch`\n$ '
+  # PROMPT=$'[%n@%m] - [%F{magenta}%~%f%1(v| %F{green}%1v%f|)]`_set_git_branch`\n$ '
+  PROMPT=$'[%n@%m] - [%F{blue}%~%f%1(v| %F{blue}%1v%f|)]`_set_git_branch`\n$ '
 }
 
 function _set_prompt() {
