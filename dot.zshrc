@@ -7,7 +7,8 @@ function _set_git_branch() {
   fi
   st=`git status 2> /dev/null`
   if [[ -n `echo "$st" | grep "^nothing to"` ]]; then
-    color=%F{green}
+    #color=%F{green}
+    color=%F{yellow}
   elif [[ -n `echo "$st" | grep "^nothing added"` ]]; then
     color=%F{yellow}
   elif [[ -n `echo "$st" | grep "^# Untracked"` ]]; then
@@ -19,8 +20,7 @@ function _set_git_branch() {
 }
 
 function _set_left_prompt(){
-  # PROMPT=$'[%n@%m] - [%F{magenta}%~%f%1(v| %F{green}%1v%f|)]`_set_git_branch`\n$ '
-  PROMPT=$'[%n@%m] - [%F{blue}%~%f%1(v| %F{blue}%1v%f|)]`_set_git_branch`\n$ '
+  PROMPT=$'[%n@%m] - [%F{magenta}%~%f%1(v| %F{green}%1v%f|)]`_set_git_branch`\n$ '
 }
 
 function _set_prompt() {
@@ -44,8 +44,7 @@ bindkey -e
 
 # ls colors
 autoload colors; colors
-# export LS_COLORS='di=34:ln=35:so=32:pi=33:ex=31:bd=46;34:cd=43;34:su=41;30:sg=46;30:tw=42;30:ow=43;30'
-export LS_COLORS='di=36:ln=36:so=36:pi=36:ex=36:bd=46;34:cd=43;34:su=41;30:sg=46;30:tw=42;30:ow=43;30'
+export LS_COLORS='di=34:ln=35:so=32:pi=33:ex=31:bd=46;34:cd=43;34:su=41;30:sg=46;30:tw=42;30:ow=43;30'
 # di:ディレクトリ
 # 30:黒, 31:赤, 32:緑, 33:茶, 34:青, 35:マゼンタ,36:シアン, 37:白, 39:デフォルト
 export WORDCHARS='*?_-.[]~=&;!#$%^(){}<>'
