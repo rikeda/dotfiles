@@ -112,5 +112,3 @@ if [ -e ~/.zshrc.include ]; then
 fi
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
-
-# test
