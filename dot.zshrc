@@ -26,7 +26,8 @@ function _set_left_prompt(){
 function _set_prompt() {
   _set_left_prompt
   # 左側(2行目以降)
-  PROMPT2="%B%{${fg[blue]}%}%_$%{${reset_color}%}%b "
+  #PROMPT2="%B%{${fg[blue]}%}%_$%{${reset_color}%}%b "
+  PROMPT2="%B%{${fg[cyan]}%}%_$%{${reset_color}%}%b "
   # 右側
   #RPROMPT=""
   # コマンドミス時
