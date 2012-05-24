@@ -43,8 +43,7 @@ bindkey -e
 
 # ls colors
 autoload colors; colors
-#export LS_COLORS='di=34:ln=35:so=32:pi=33:ex=31:bd=46;34:cd=43;34:su=41;30:sg=46;30:tw=42;30:ow=43;30'
-#export LS_COLORS='di=34:ln=34:so=34:pi=34:ex=34:bd=46;34:cd=43;34:su=41;30:sg=46;30:tw=42;30:ow=43;30'
+export LS_COLORS='di=34:ln=35:so=32:pi=33:ex=31:bd=46;34:cd=43;34:su=41;30:sg=46;30:tw=42;30:ow=43;30'
 # di:ディレクトリ
 # 30:黒, 31:赤, 32:緑, 33:茶, 34:青, 35:マゼンタ,36:シアン, 37:白, 39:デフォルト
 export WORDCHARS='*?_-.[]~=&;!#$%^(){}<>'
