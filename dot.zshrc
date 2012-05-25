@@ -7,8 +7,8 @@ function _set_git_branch() {
   fi
   st=`git status 2> /dev/null`
   if [[ -n `echo "$st" | grep "^nothing to"` ]]; then
-    #color=%F{green}
-    color=%F{cyan}
+    color=%F{green}
+    #color=%F{cyan}
   elif [[ -n `echo "$st" | grep "^nothing added"` ]]; then
     color=%F{yellow}
   elif [[ -n `echo "$st" | grep "^# Untracked"` ]]; then
@@ -20,15 +20,15 @@ function _set_git_branch() {
 }
 
 function _set_left_prompt(){
-  #PROMPT=$'[%n@%m] - [%F{magenta}%~%f%1(v| %F{green}%1v%f|)]`_set_git_branch`\n$ '
-  PROMPT=$'[%n@%m] - [%F{red}%~%f%1(v| %F{green}%1v%f|)]`_set_git_branch`\n$ '
+  PROMPT=$'[%n@%m] - [%F{magenta}%~%f%1(v| %F{green}%1v%f|)]`_set_git_branch`\n$ '
+  #PROMPT=$'[%n@%m] - [%F{red}%~%f%1(v| %F{green}%1v%f|)]`_set_git_branch`\n$ '
 }
 
 function _set_prompt() {
   _set_left_prompt
   # 左側(2行目以降)
-  #PROMPT2="%B%{${fg[blue]}%}%_$%{${reset_color}%}%b "
-  PROMPT2="%B%{${fg[cyan]}%}%_$%{${reset_color}%}%b "
+  PROMPT2="%B%{${fg[blue]}%}%_$%{${reset_color}%}%b "
+  #PROMPT2="%B%{${fg[cyan]}%}%_$%{${reset_color}%}%b "
   # 右側
   #RPROMPT=""
   # コマンドミス時
